@@ -1,43 +1,67 @@
-# Scalable IoT Project with Real-Time Visualization in Node-RED - Proyecto IoT Escalable con Visualización en Node-RED
+# 🚀 Scalable IoT Project with Real-Time Visualization in Node-RED  
+### 🛰️ End-to-End IoT System with MQTT, MySQL & Live Dashboards
 
-## Description
-This project implements a **scalable IoT platform** covering everything from the **physical layer** to the **data transport layer**, with **MySQL** storage and real-time visualization using **Node-RED**. The system collects data from sensors connected to an **ESP32 microcontroller**, transmits it using the **MQTT** protocol, stores it in a MySQL database, and displays it through an **interactive dashboard**.
+---
 
-## Project Objectives
-- **Implement a scalable IoT system** with accessible visual representation.
-- **Transmit data from ESP32 microcontrollers** to a server via **MQTT**.
-- Create a **Node-RED dashboard** to visualize sensor data in real time using custom charts and indicators.
+## 📌 Description
 
-## Methodology
-The project was divided into several phases:
-1. **ESP32 microcontroller setup** for data collection.
-2. **Data transmission using MQTT** for bandwidth-efficient communication.
-3. **Backend development in Python**, connecting MQTT to a **MySQL** database.
-4. **Dashboard creation in Node-RED**, to display the data in real time.
+This project implements a **scalable IoT platform** covering everything from the **physical layer** to the **data transport layer**, featuring **MySQL** storage and real-time visualization using **Node-RED**.
 
-## Implementation
+Sensor data is collected via an **ESP32 microcontroller**, transmitted using the **MQTT** protocol, stored in a **MySQL** database, and displayed through an **interactive dashboard** built with Node-RED.
 
-### 1. ESP32 Setup
-The ESP32 was configured to read sensor data through its pins using the **Wokwi** development environment.
+---
 
-### 2. Data Transport Layer with MQTT
-The **MQTT** protocol was used to send the data from the ESP32 to the server. A **Mosquitto** MQTT broker was set up to handle incoming messages.
+## 🎯 Project Objectives
 
-### 3. Backend and MySQL Connection
-A backend was developed in **Python** using the **Paho-MQTT** library. It subscribes to ESP32 data topics and stores the data in **MySQL** without using PHPMyAdmin, maximizing performance.
+- 🛠️ Build a **modular and scalable IoT system**.
+- 📡 **Transmit sensor data** from ESP32 to the backend via **MQTT**.
+- 📊 **Visualize real-time data** using a **custom Node-RED dashboard**.
 
-### 4. Scalability and Optimization
-The modular architecture allows new ESP32 nodes to be added without impacting stability. The **database** and **MQTT server** were optimized to support system growth.
+---
 
-### 5. Node-RED Dashboard
-An **interactive dashboard** was built in Node-RED to display real-time data. Its features include:
-- **Real-time charts** using **ui_chart**, **ui_gauge**, and **ui_text**.
-- **Threshold-based alerts** to notify users of critical temperature and humidity values.
-- A panel for **metric selection** (currently in development).
+## 🔍 Methodology
 
-## Code
-### ESP32
-- [Wokwi Project](https://wokwi.com/projects/408634800407273473)
+The project was developed through the following phases:
+
+1. **ESP32 microcontroller setup** for sensor data acquisition.
+2. **MQTT-based data transmission** for efficient messaging.
+3. **Backend in Python**, connecting MQTT to **MySQL**.
+4. **Node-RED dashboard** creation for real-time data visualization.
+
+---
+
+## ⚙️ Implementation
+
+### 🧩 1. ESP32 Setup
+- The **ESP32** was configured to read sensor data via GPIO pins using the **Wokwi** online simulator.
+
+### 🔗 2. Data Transport Layer with MQTT
+- The **MQTT protocol** was used to send sensor data to the server.
+- A **Mosquitto MQTT broker** was implemented to manage message handling and topic subscriptions.
+
+### 🐍 3. Backend in Python + MySQL Integration
+- A backend script was written in **Python** using the **Paho-MQTT** library.
+- The backend subscribes to ESP32 topics and writes the incoming data directly to **MySQL**, without the use of PHPMyAdmin for improved performance.
+
+### 📈 4. Scalability & Optimization
+- The system is **modular and easily extendable**: new ESP32 nodes can be added without affecting system stability.
+- **MQTT broker** and **database performance** were tuned to support scaling.
+
+### 🖥️ 5. Node-RED Dashboard
+An interactive dashboard was built using **Node-RED**, with the following features:
+
+- 📉 **Real-time charts** using `ui_chart`, `ui_gauge`, and `ui_text`.
+- 🚨 **Threshold-based alerts** for temperature and humidity anomalies.
+- 📋 A **metric selection panel** *(currently under development)*.
+
+---
+
+## 🧪 Code & Simulation
+
+### 🔌 ESP32 (Wokwi Simulation)
+- [Wokwi Project Link](https://wokwi.com/projects/408634800407273473)
+
+---
 
 
 
